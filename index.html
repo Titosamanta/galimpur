@@ -10,7 +10,15 @@
     <header>
         <div class="header-content">
             <h1>শ্রী শ্রী শীতলা মাতা পূজা</h1>
-            <img src="images/futuristic-image.jpg" alt="Futuristic Image">
+			<h3>পরিচালনায় গালিমপুর দেশবাসীবর্গ</h3>
+			<h3>স্থান  - গালিমপুর , শ্যামচক , পশ্চিম মেদিনীপুর </h3>
+
+			<div class="announcement">
+        <h1 style="color: white;"> 🌼🙏 শ্রী শ্রী শীতলা মাতা পূজার সময়সূচী  🙏🌼</h1>
+        <p class="blink" style="color: yellow;">🌟 মায়ের আগমন  ও শীতলা  মঙ্গল - 21 মার্চ 2025 🌟</p>
+		<p class="blink" style="color: yellow;">🌟 মায়ের মহা পুজো  - 22 মার্চ 2025 🌟</p>
+		<p class="blink" style="color: yellow;">🌟 মায়ের  পুজো এবং মহোৎসব   - 23 মার্চ 2025 🌟</p>
+    </div>
         </div>
     </header>
 
@@ -22,6 +30,92 @@
             <li><a href="expense-report.html">Expense Report</a></li>
         </ul>
     </nav>
+	<div class="slider-container">
+    <div class="slider">
+	<div class="slide">
+            <img src="images/2024/21.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="images/2024/1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="images/2024/3.jpg" alt="Image 1">
+        </div>
+		<div class="slide">
+            <img src="images/2024/5.jpg" alt="Image 1">
+        </div>
+		<div class="slide">
+            <img src="images/2024/1.jpg" alt="Image 1">
+        </div>
+		<div class="slide">
+            <img src="images/2023/1.jpg" alt="Image 1">
+        </div>
+		<div class="slide">
+            <img src="images/2023/6.jpg" alt="Image 1">
+        </div>
+		<div class="slide">
+            <img src="images/2023/3.jpg" alt="Image 1">
+        </div>
+		<div class="slide">
+            <img src="images/2023/2.jpg" alt="Image 1">
+        </div>
+		
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+
+    // Function to change slide
+    function changeSlide() {
+        const slider = document.querySelector('.slider');
+        slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+
+    // Automatic slide change every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        changeSlide();
+    }, 5000);  // 5000ms = 5 seconds
+
+    // Navigation buttons functionality
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+        changeSlide();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        changeSlide();
+    });
+
+    // Dots navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            changeSlide();
+        });
+    });
+
+    // Initialize slider with the first image
+    changeSlide();
+</script>
 
     <footer>
         <p>&copy; galimpur desh puja committee.</p>
