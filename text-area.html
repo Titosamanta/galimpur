@@ -3,13 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read-Only Text Area</title>
+    <title>Announcement</title>
+	 <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chanda {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d14b4b;
+            margin-bottom: 15px;
+        }
+
+        .coupons {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .coupons p {
+            margin: 10px 0;
+        }
+
+        .normal, .children, .parcel {
+            font-weight: bold;
+            color: #4b0082;
+        }
+
+        .normal {
+            color: #ff6347;
+        }
+
+        .children {
+            color: #32cd32;
+        }
+
+        .parcel {
+            color: #ffd700;
+        }
+
+        .note {
+            font-size: 16px;
+            color: #555;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Read-Only Text Area</h1>
+            <h1>Announcement</h1>
         </div>
     </header>
 
@@ -22,10 +87,25 @@
     </div>
 
     <section>
-        <h2>Read-Only Text Area</h2>
-        <textarea readonly>
+        <h2>Announcement For Deshpuja 2025</h2>
+        <h1>শ্রী শ্রী শীতলা মাতার পূজা ২০২৫</h1>
 
-        </textarea>
+    <div class="content">
+        <div class="chanda">
+            এবারের পুজোর চাঁদা: <span class="normal">৮০০ টাকা</span>
+        </div>
+
+        <div class="coupons">
+            <p>এখনো পর্যন্ত প্রসাদী কুপন এর দাম:</p>
+            <p class="normal">নর্মাল কুপন - <span class="normal">৫০ টাকা</span></p>
+            <p class="children">শিশু কুপন - <span class="children">৪০ টাকা</span></p>
+            <p class="parcel">পার্সেল কুপন - <span class="parcel">৬০ টাকা</span></p>
+        </div>
+
+        <div class="note">
+            <p>দয়া করে নির্দিষ্ট সময়ের মধ্যে কুপন সংগ্রহ করুন।</p>
+        </div>
+    </div>
     </section>
 
     <footer>
